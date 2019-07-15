@@ -6,6 +6,24 @@ import BottomRow from "./BottomRow";
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
+  const [homeScore, setHomeScore] = useState(32)
+  const [awayScore, setAwayScore] = useState(32)
+  const [time, setTime] = useState(8)
+
+  const [firstName, setFirstName] =useState('Elyssia')
+  const [lastName, setLastName] = useState('Widjaja')
+
+  const combinedName = () => {
+    console.log('on')
+    return firstName.concat(lastName)
+
+  }
+
+  const timer = () => {
+    time > 0 ? setTime(time-1): setTime(10)
+  }
+
+
   return (
     <div className="container">
       <section className="scoreboard">
